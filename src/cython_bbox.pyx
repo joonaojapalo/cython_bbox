@@ -9,7 +9,8 @@ cimport cython
 import numpy as np
 cimport numpy as np
 
-DTYPE = np.float
+# detect if numpy.float exists (removed in Numpy 1.24)
+DTYPE = np.float if hasattr(np, "float") else float
 ctypedef np.float_t DTYPE_t
 
 def bbox_overlaps(
