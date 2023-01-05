@@ -37,6 +37,7 @@ setup(
     name='cython_bbox',
     ext_modules=cythonize(ext_modules),
     version = '0.1.3',
+    compiler_directives={'language_level' : "Py2"},
     description = 'Standalone cython_bbox',
     long_description=long_description,
     long_description_content_type="text/markdown",
